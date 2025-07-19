@@ -1,0 +1,59 @@
+<!-- this tag tells the browser that this is an HTML5 webpage -->
+<!DOCTYPE html>
+<!-- html is a required tag on each html page; lang=en is optional-->
+<html lang="en">
+    <!-- head seaction is where the info for the browers and search engine go-->
+<head>
+    <!-- tells the browser about what characters say appear on the site; UFT-8 is-->
+    <!-- basically everything-->
+  <meta charset="UTF-8">
+  <!-- Set the viewport to ensure mobile responsiveness -->
+   <!-- leave this meta tag as is so that the site will display ok on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage -->
+  <title>Rocky Mountains</title>
+  <!-- Links the external CSS stylesheet -->
+  <link rel="stylesheet" href="slideshow.css">
+</head>
+<!-- The <body> section contains everything that will be visible on the webpage -->
+<body>
+    <!-- The header section usually contains introductory content or navigation -->
+  <header>
+    <!-- Main heading of the page displayed at the top -->
+    <h1>Rocky Mountains</h1>
+    <!-- Subtitle -->
+    <p class="subtitle">A breathtaking journey through majestic peaks and alpine beauty.</p>
+  </header>
+
+  <!-- The <main> section contains the main content of the webpage -->
+  <main>
+    <!-- This <div> holds the image slideshow -->
+    <div id="slideshow">
+        <!-- The image element that displays the slideshow.
+           The ID 'imgSlide' is used in JavaScript to change images dynamically.
+           The class 'slide' is styled with CSS.
+           The src points to the first image in the slideshow folder.
+           The alt attribute provides alternate text if the image can't load -->
+      <img id="imgSlide" class="slide" src="images/mountain1.jpg" alt="Rocky Mountain">
+      <div id="caption">Mountain 1 - Colorado, USA By Joe Dudeck</div>
+    </div>
+
+    <!-- A subtitle paragraph to give credit for image sources -->
+    <p class="subtitle">Free Licensed Images by unsplash.com</p>
+
+    <!-- This <div> holds the navigation buttons for the slideshow -->
+    <div class="buttons">
+        <!-- Button that calls the JavaScript function 'prevSlide()' when clicked
+           to show the previous image -->
+      <button onclick="prevSlide()">Previous</button>
+      <!-- Button that calls the JavaScript function 'nextSlide()' when clicked
+           to show the next image -->
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </main>
+
+   <!-- This script tag loads the external JavaScript file (slideshow.js)
+       which contains the logic for image slideshow functionality -->
+  <script src="slideshow.js"></script>
+</body>
+</html>
